@@ -6,10 +6,7 @@ import {
   getComments,
   createPost,
   publishPost,
-  createComment,
-  signup,
-  login,
-  logout
+  createComment
 } from "./connectors";
 import pubsub from "./pubsub";
 
@@ -51,10 +48,7 @@ const resolvers = {
   Mutation: {
     createPost: (_, args) => createPost(args),
     publishPost: (_, args, ctx) => publishPost(args, ctx),
-    createComment: (_, args) => createComment(args),
-    signup: (_, args, ctx) => signup(args, ctx),
-    login: (_, args, ctx) => login(args, ctx),
-    logout: (_, args, ctx) => logout(ctx)
+    createComment: (_, args) => createComment(args)
   },
   Subscription: {
     onNewPost: {
