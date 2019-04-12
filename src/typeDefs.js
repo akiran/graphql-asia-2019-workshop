@@ -40,7 +40,6 @@ const typeDefs = gql`
 
   type Query {
     ping: Boolean
-    me: User
     posts: [Post]
     post(id: Int!): Post
     users: [User]
