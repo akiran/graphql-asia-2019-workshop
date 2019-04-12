@@ -9,19 +9,7 @@ const PORT = 4000;
 
 const graphql = new ApolloServer({
   typeDefs,
-  resolvers,
-  context: options => {
-    const { req, res, connection } = options;
-    if (connection) {
-      return connection.context;
-    }
-    return {};
-  },
-  playground: {
-    settings: {
-      "request.credentials": false
-    }
-  }
+  resolvers
 });
 
 const app = express();

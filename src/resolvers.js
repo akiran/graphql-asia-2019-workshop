@@ -31,12 +31,6 @@ const resolvers = {
   },
   Query: {
     ping: () => true,
-    me: (_, args, ctx) => {
-      if (!ctx.user) {
-        throw new Error("Not logged in");
-      }
-      return getUser(ctx.user.id);
-    },
     posts: () => getPosts(),
     post: (_, args) => getPost(args.id),
     users: (_, args, ctx) => {
