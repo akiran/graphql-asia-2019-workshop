@@ -8,8 +8,6 @@ const typeDefs = gql`
     UNKNOWN
   }
 
-  directive @auth(requires: Role = ADMIN) on OBJECT | FIELD_DEFINITION
-
   type User {
     id: Int!
     email: String
@@ -45,7 +43,7 @@ const typeDefs = gql`
     login(email: String!, password: String!): Boolean
     logout: Boolean
     createPost(title: String, description: String, author: Int): Post
-    publishPost(id: Int): Boolean @auth(requires: ADMIN)
+    publishPost(id: Int): Boolean
     createComment(text: String!, post: Int!, author: Int!): Comment
   }
 

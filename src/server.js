@@ -10,7 +10,6 @@ import resolvers from "./resolvers";
 import jwt from "jsonwebtoken";
 import { JWT_SECRET } from "./config";
 import { getUser } from "./connectors";
-import AuthDirective from "./AuthDirective";
 
 const PORT = 4000;
 
@@ -24,9 +23,6 @@ function authCheck(token) {
 }
 
 const graphql = new ApolloServer({
-  schemaDirectives: {
-    auth: AuthDirective
-  },
   typeDefs,
   resolvers,
   context: options => {
