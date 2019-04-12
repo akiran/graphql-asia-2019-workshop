@@ -44,11 +44,6 @@ const resolvers = {
       return getUsers();
     },
     user: (_, args) => getUser(args.id)
-  },
-  Mutation: {
-    createPost: (_, args) => createPost(args),
-    publishPost: (_, args, ctx) => publishPost(args, ctx),
-    createComment: (_, args) => createComment(args)
   }
 };
 

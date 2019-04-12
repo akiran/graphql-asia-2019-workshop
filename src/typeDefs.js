@@ -32,12 +32,6 @@ const typeDefs = gql`
     published: Boolean
   }
 
-  type Mutation {
-    createPost(title: String, description: String, author: Int): Post
-    publishPost(id: Int): Boolean
-    createComment(text: String!, post: Int!, author: Int!): Comment
-  }
-
   type Query {
     ping: Boolean
     me: User
