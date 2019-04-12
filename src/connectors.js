@@ -26,6 +26,38 @@ export function getComments(postId) {
   const comments = db.get("comments");
   return comments.filter(comment => comment.post === postId);
 }
+export function createPost(post) {
+  const posts = getPosts();
+  const newPost = {
+    id: posts.length + 1,
+    ...post
+  };
+  const newPosts = posts.concat(newPost);
+  db.set("posts", newPosts);
+  pubsub.publish("ON_NEW_POST", newPost);
+  return newPost;
+}
+
+export function publishPost(args) {
+  const posts = getPosts();
+  const index = posts.findIndex(post => post.id === args.id);
+  if (index >= 0) {
+    posts[index].published = true;
+    db.set("posts", posts);
+    return true;
+  }
+  return false;
+}
+export function createComment(comment) {
+  const comments = db.get("comments");
+  const newComment = {
+    id: comments.length + 1,
+    ...comment
+  };
+  const newComments = comments.concat(newComment);
+  db.set("comments", newComments);
+  return newComment;
+}
 
 export function signup(user, { res }) {
   const users = getUsers();
@@ -65,37 +97,4 @@ export function logout({ res, user }) {
     expires: new Date()
   });
   return true;
-}
-
-export function createPost(post) {
-  const posts = getPosts();
-  const newPost = {
-    id: posts.length + 1,
-    ...post
-  };
-  const newPosts = posts.concat(newPost);
-  db.set("posts", newPosts);
-  pubsub.publish("ON_NEW_POST", newPost);
-  return newPost;
-}
-
-export function publishPost(args) {
-  const posts = getPosts();
-  const index = posts.findIndex(post => post.id === args.id);
-  if (index >= 0) {
-    posts[index].published = true;
-    db.set("posts", posts);
-    return true;
-  }
-  return false;
-}
-export function createComment(comment) {
-  const comments = db.get("comments");
-  const newComment = {
-    id: comments.length + 1,
-    ...comment
-  };
-  const newComments = comments.concat(newComment);
-  db.set("comments", newComments);
-  return newComment;
 }

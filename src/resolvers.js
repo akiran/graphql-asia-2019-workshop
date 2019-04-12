@@ -49,14 +49,6 @@ const resolvers = {
     createPost: (_, args) => createPost(args),
     publishPost: (_, args, ctx) => publishPost(args, ctx),
     createComment: (_, args) => createComment(args)
-  },
-  Subscription: {
-    onNewPost: {
-      resolve(payload, args, ctx) {
-        return payload;
-      },
-      subscribe: () => pubsub.asyncIterator("ON_NEW_POST")
-    }
   }
 };
 

@@ -46,10 +46,6 @@ const typeDefs = gql`
     users: [User]
     user(id: Int!): User
   }
-
-  type Subscription {
-    onNewPost: Post
-  }
 `;
 
 export default typeDefs;
