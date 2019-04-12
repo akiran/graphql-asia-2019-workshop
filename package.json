@@ -1,0 +1,36 @@
+{
+  "name": "graphql-workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --exec 'node -r esm' --watch '*.js' ./src/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^2.4.8",
+    "apollo-server-express": "^2.4.8",
+    "bcrypt": "^3.0.5",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^7.0.0",
+    "esm": "^3.2.22",
+    "express": "^4.16.4",
+    "graphql": "^14.2.1",
+    "graphql-subscriptions": "^1.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.11",
+    "morgan": "^1.9.1",
+    "simple-json-db": "^1.2.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "9.x",
+    "eslint": "5.x",
+    "eslint-config-react-app": "^3.0.8",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "nodemon": "^1.18.10"
+  }
+}
