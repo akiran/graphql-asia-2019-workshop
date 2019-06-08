@@ -17,9 +17,12 @@ function authCheck(token) {
   if (!token) {
     return null;
   }
-
-  const decoded = jwt.verify(token, JWT_SECRET);
-  return getUser(decoded.id);
+  try {
+    const decoded = jwt.verify(token, JWT_SECRET);
+    return getUser(decoded.id);
+  } catch (e) {
+    return null;
+  }
 }
 
 const graphql = new ApolloServer({
