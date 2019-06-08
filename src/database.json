@@ -1,51 +1,49 @@
 {
-    "users": [
-        {
-            "id": 1,
-            "email": "kiran@gmail.com",
-            "firstName": "Kiran",
-            "password": "$2b$10$WEPEjjUm0OLxy4Ur/J6Nlu/chdiKP/p6WzQiIyk6C0EMbkzjUKSQq",
-            "role": "ADMIN"
-        },
-        {
-            "id": 2,
-            "email": "kumar@gmail.com",
-            "password": "$2b$10$8LCr49wcjgoBU77ZTTGKgeUb.UD5lx9C9SZD6GgIlxIGEtQmR17SW",
-            "firstName": "Kumar",
-            "role": "USER"
-        }
-    ],
-    "posts": [
-        {
-            "id": 1,
-            "title": "Introduction to GraphQL",
-            "description": "",
-            "author": 1
-        },
-        {
-            "id": 2,
-            "title": "Introduction to Apollo Client",
-            "description": "",
-            "author": 1
-        },
-        {
-            "id": 3,
-            "title": "Introduction to React",
-            "description": "",
-            "author": 2
-        },
-        {
-            "id": 4,
-            "title": "sample port",
-            "author": 2
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "text": "Thanks",
-            "post": 1,
-            "author": 1
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "email": "kiran@gmail.com",
+      "firstName": "Kiran",
+      "lastName": "Kumar",
+      "password": "$2b$10$WEPEjjUm0OLxy4Ur/J6Nlu/chdiKP/p6WzQiIyk6C0EMbkzjUKSQq",
+      "role": "ADMIN"
+    },
+    {
+      "id": 2,
+      "email": "john@gmail.com",
+      "firstName": "John",
+      "lastName": "Doe",
+      "password": "$2b$10$8LCr49wcjgoBU77ZTTGKgeUb.UD5lx9C9SZD6GgIlxIGEtQmR17SW",
+      "role": "USER"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "Introduction to GraphQL",
+      "description": "",
+      "author": 1,
+      "published": true
+    },
+    {
+      "id": 2,
+      "title": "Introduction to Apollo Client",
+      "description": "",
+      "author": 1
+    },
+    {
+      "id": 3,
+      "title": "Introduction to React",
+      "description": "",
+      "author": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "text": "Thanks",
+      "post": 1,
+      "author": 1
+    }
+  ]
 }
