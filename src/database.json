@@ -22,7 +22,8 @@
       "id": 1,
       "title": "Introduction to GraphQL",
       "description": "",
-      "author": 1
+      "author": 1,
+      "published": true
     },
     {
       "id": 2,
@@ -34,11 +35,6 @@
       "id": 3,
       "title": "Introduction to React",
       "description": "",
-      "author": 2
-    },
-    {
-      "id": 4,
-      "title": "sample port",
       "author": 2
     }
   ],
