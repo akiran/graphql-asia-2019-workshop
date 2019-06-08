@@ -60,6 +60,8 @@ Kiran Abburi
 /users/1
 ```
 
+---
+
 ### REST
 
 - Multiple api calls
@@ -68,6 +70,8 @@ Kiran Abburi
 /posts/1
 /posts/1/comments
 ```
+
+---
 
 ### REST
 
@@ -98,3 +102,8 @@ Kiran Abburi
 
 - Solves underfetching and overfetching problem
 - GraphQL is more flexible
+- Type system
+- Enable us to build tools that improve
+  - Developer experience
+  - Declarative data fetching on client
+  - Effective caching on client
