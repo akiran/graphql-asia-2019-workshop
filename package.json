@@ -19,7 +19,7 @@
     "graphql": "^14.2.1",
     "graphql-subscriptions": "^1.1.0",
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.21",
     "morgan": "^1.9.1",
     "simple-json-db": "^1.2.1"
   },
