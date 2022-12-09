@@ -15,7 +15,7 @@
     "cookie-parser": "^1.4.4",
     "dotenv": "^7.0.0",
     "esm": "^3.2.22",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "graphql": "^14.2.1",
     "graphql-subscriptions": "^1.1.0",
     "jsonwebtoken": "^8.5.1",
